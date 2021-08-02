@@ -44,20 +44,20 @@ For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more ex
 
 
 ## NOTICE:
-### 3d XYZ in \<label\>.txt are in rect camera coord.
-### 2d box xy are in image2 coord
-### Points in \<lidar\>.bin are in Velodyne coord.
+1. 3d XYZ in \<label\>.txt are in rect camera coord.
+2. 2d box xy are in image2 coord
+3. Points in \<lidar\>.bin are in Velodyne coord.
 ***
 # Coordinate Transformation:
-    y_image2 = P^2_rect * x_rect
-    y_image2 = P^2_rect * R0_rect * Tr_velo_to_cam * x_velo
-    x_ref = Tr_velo_to_cam * x_velo
-    x_rect = R0_rect * x_ref
+ y_image2 = P^2_rect * x_rect
+ y_image2 = P^2_rect * R0_rect * Tr_velo_to_cam * x_velo
+ x_ref = Tr_velo_to_cam * x_velo
+ x_rect = R0_rect * x_ref
 
-    P^2_rect = [f^2_u,  0,      c^2_u,  -f^2_u b^2_x;
-                0,      f^2_v,  c^2_v,  -f^2_v b^2_y;
-                0,      0,      1,      0]
-                = K * [1|t]
+ P^2_rect = [f^2_u,  0,      c^2_u,  -f^2_u b^2_x;
+             0,      f^2_v,  c^2_v,  -f^2_v b^2_y;
+             0,      0,      1,      0]
+             = K * [1|t]
 ***
 # Coordinate Visualization:
     image2 coord:
