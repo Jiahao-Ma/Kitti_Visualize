@@ -42,6 +42,7 @@ For a implementation demo see [notebook](kitti_demo_notebook.ipynb). For more ex
 4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [result](git_image\draw_pointclouds_in_rgb.png)
 
 Part of results: 
+
 <img src=".\git_image\draw_2DBBox_in_rgb.png" alt="2D boxes LiDar data on Camera image" align="center" />
 <img src=".\git_image\draw_pointclouds_in_rgb.png" alt="Point cloud on Camera image" align="center" />
 <img src=".\git_image\draw_3DBBox_in_rgb.png" alt="3D boxes LiDar data on Camera image" align="center" />
