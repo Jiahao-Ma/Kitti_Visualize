@@ -41,19 +41,17 @@ For a implementation demo see [notebook](kitti_demo_notebook.ipynb). For more ex
 3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`. [result](git_image\draw_pointclouds_in_velo.png)
 4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [result](git_image\draw_pointclouds_in_rgb.png)
 
-Part of results: 
+#### Part of results: 
 
 <img src=".\git_image\draw_2DBBox_in_rgb.png" alt="2D boxes LiDar data on Camera image" align="center" />
 <img src=".\git_image\draw_pointclouds_in_rgb.png" alt="Point cloud on Camera image" align="center" />
 <img src=".\git_image\draw_3DBBox_in_rgb.png" alt="3D boxes LiDar data on Camera image" align="center" />
 
-
-
 ## NOTICE:
 1. 3d XYZ in \<label\>.txt are in rect camera coord.
 2. 2d box xy are in image2 coord
 3. Points in \<lidar\>.bin are in Velodyne coord.
-***
+
 ### Coordinate Transformation:
 ```
  y_image2 = P^2_rect * x_rect
@@ -66,7 +64,7 @@ Part of results:
              0,      0,      1,      0]
              = K * [1|t]
 ```
-***
+
 ### Coordinate Visualization:
 ```
     image2 coord:
