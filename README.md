@@ -36,10 +36,10 @@ kitti
 
 ## Demo
 For a implementation demo see [notebook](kitti_demo_notebook.ipynb). For more exploration and implementation details see [Kittp.py](Kitti.py) and [utils.py](utils.py).
-1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`. [result](git_image\draw_3DBBox_in_velo.png)
-2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`. [2D_result](git_image\draw_3DBBox_in_rgb.png) and [3D_result](.\git_image\draw_2DBBox_in_rgb.png)
-3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`. [result](git_image\draw_pointclouds_in_velo.png)
-4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [result](git_image\draw_pointclouds_in_rgb.png)
+1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`. [result](https://github.com/Robert-Mar/Kitti_Visualize/tree/main/git_image/git_image/draw_3DBBox_in_velo.png)
+2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`. [2D_result](https://github.com/Robert-Mar/Kitti_Visualize/tree/main/git_image/git_image/draw_3DBBox_in_rgb.png) and [3D_result](https://github.com/Robert-Mar/Kitti_Visualize/tree/main/git_image/git_image/draw_2DBBox_in_rgb.png)
+3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`. [result](https://github.com/Robert-Mar/Kitti_Visualize/tree/main/git_image/git_image/draw_pointclouds_in_velo.png)
+4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [result](https://github.com/Robert-Mar/Kitti_Visualize/tree/main/git_image/git_image/draw_pointclouds_in_rgb.png)
 
 #### Part of results: 
 
