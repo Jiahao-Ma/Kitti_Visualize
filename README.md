@@ -14,7 +14,7 @@ Common dependencies like `numpy`, `matplotlib`, `PIL`
 
 ## Dataset
 
-Download the data (calib, image\_2, label\_2, velodyne) from [KITTI website](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d). 
+Download the data (calib, image\_2, label\_2, Velodyne) from [KITTI website](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d). 
 
 ![image](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/download_link.png)
 
