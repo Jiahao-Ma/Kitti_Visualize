@@ -61,7 +61,8 @@ For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more ex
              = K * [1|t]
 ```
 ***
-# Coordinate Visualization:
+### Coordinate Visualization:
+```
     image2 coord:
         ----> x-axis (u)
     |
@@ -97,8 +98,9 @@ For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more ex
     #    (z)
 
     Ref (KITTI paper): http://www.cvlibs.net/publications/Geiger2013IJRR.pdf
+```
 
-***
+
 
 
 
