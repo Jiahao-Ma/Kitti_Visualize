@@ -14,7 +14,7 @@ Common dependencies like `numpy`, `matplotlib`, `PIL`
 
 ## Dataset
 
-Download the data (calib, image\_2, label\_2, velodyne) from [KITTI website](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d). 
+Download the data (calib, image\_2, label\_2, Velodyne) from [KITTI website](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d). 
 
 ![image](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/download_link.png)
 
@@ -33,6 +33,7 @@ kitti
         pred
             000000.txt
 ```
+<<<<<<< HEAD
 
 ## NOTICE:
 ### 3d XYZ in \<label\>.txt are in rect camera coord.
@@ -87,3 +88,5 @@ kitti
     Ref (KITTI paper): http://www.cvlibs.net/publications/Geiger2013IJRR.pdf
 
 ***
+=======
+>>>>>>> deca8bfc273d903ebf63febeb4913897b083fae7
