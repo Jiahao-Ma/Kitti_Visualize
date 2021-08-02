@@ -16,7 +16,7 @@ Common dependencies like `numpy`, `matplotlib`, `PIL`
 
 Download the data (calib, image\_2, label\_2, velodyne) from [KITTI website](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d). 
 
-![image](https://github.com//Robert-Mar//Kitti_Visualize//tree//main//git_image//download_link.png)
+![image](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/download_link.png)
 
 And place it in your data folder at `Kitti`. The folder structure is as following:
 ```
