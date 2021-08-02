@@ -33,7 +33,15 @@ kitti
         pred
             000000.txt
 ```
-<<<<<<< HEAD
+
+## Demo
+For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more exploration and implementation details see [Kittp.py](Kitti.py) and [utils.py](utils.py).
+1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`.
+2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`.
+3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`.
+4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`.
+
+
 
 ## NOTICE:
 ### 3d XYZ in \<label\>.txt are in rect camera coord.
@@ -81,12 +89,14 @@ kitti
     #   | |        | |
     #   . 3 -------- 0
     #   |/   .- - -|/ - - -> (x)
-    #   2 ---|----- 1
-    #        |
-    #        | (y)
+    #   2 --/-|----- 1
+    #      /  |
+    #     /   | (y)
+    #    (z)
 
     Ref (KITTI paper): http://www.cvlibs.net/publications/Geiger2013IJRR.pdf
 
 ***
-=======
->>>>>>> deca8bfc273d903ebf63febeb4913897b083fae7
+
+
+

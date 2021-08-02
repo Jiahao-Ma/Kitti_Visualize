@@ -169,14 +169,15 @@ def compute_3d_bbox(obj:Object3D, calib:Calib):
     return corner_2d, corner_3d.T
 
 def draw_3DBBox_in_rgb(img, labels, calib, show=True, linewidth=2, color=(0, 1, 0), fontcolor=(0, 1, 0.5), fontsize=12, figsize=(10,10)):
-
+    h, w, _ = np.array(img).shape
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111)
     for obj in labels:
         # （8, 2） 2d points in image2 coord
         corner_2d_rect, _ = compute_3d_bbox(obj, calib)
-        ax.text(corner_2d_rect[-1, 0]-5, corner_2d_rect[-1, 1]-5, s=obj.name, c=fontcolor, fontsize=fontsize)
-        ax = draw_3DBBox(ax, corner_2d_rect, linewidth=linewidth, edgecolor=color)
+        if (corner_2d_rect[:, 0]>0).all() & (corner_2d_rect[:, 0]<w).all() & (corner_2d_rect[:, 1]>0).all() & (corner_2d_rect[:, 1]<h).all():
+            ax.text(corner_2d_rect[-1, 0]-5, corner_2d_rect[-1, 1]-5, s=obj.name, c=fontcolor, fontsize=fontsize)
+            ax = draw_3DBBox(ax, corner_2d_rect, linewidth=linewidth, edgecolor=color)
     ax.imshow(img)
     if show:
         plt.show()
@@ -364,7 +365,7 @@ if __name__ == "__main__":
     import copy
     base_path = r'F:\ObjectDetection\dataset\KITTI\Kitti'
     kitti = Kitti_Dataset(base_path)
-    index = 2
+    index = 4
     img = kitti.get_rgb(index)
     img_3d = copy.deepcopy(img)
     labels = kitti.get_label(index)
