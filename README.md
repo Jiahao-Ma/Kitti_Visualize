@@ -35,23 +35,25 @@ kitti
 ```
 
 ## Demo
+
 For a implementation demo see [notebook](kitti_demo_notebook.ipynb). For more exploration and implementation details see [Kittp.py](Kitti.py) and [utils.py](utils.py).
-1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`. [result](git_image\draw_3DBBox_in_velo.png)
-2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`. [2D_result](git_image\draw_3DBBox_in_rgb.png) [3D_result](.\git_image\draw_2DBBox_in_rgb.png)
-3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`. [result](git_image\draw_pointclouds_in_velo.png)
-4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [result](git_image\draw_pointclouds_in_rgb.png)
-Part of results: 
+1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`. [RESULT](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/draw_3DBBox_in_velo.png).
+2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`. 
+[2D_RESULT](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/draw_2DBBox_in_rgb.png) and [3D_RESULT](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/draw_3DBBox_in_rgb.png). 
+4. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`. [RESULT](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/draw_pointclouds_in_velo.png).
+5. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`. [RESULT](https://github.com/Robert-Mar/Kitti_Visualize/blob/main/git_image/draw_pointclouds_in_rgb.png).
+
+#### Part of results: 
+
 <img src=".\git_image\draw_2DBBox_in_rgb.png" alt="2D boxes LiDar data on Camera image" align="center" />
 <img src=".\git_image\draw_pointclouds_in_rgb.png" alt="Point cloud on Camera image" align="center" />
 <img src=".\git_image\draw_3DBBox_in_rgb.png" alt="3D boxes LiDar data on Camera image" align="center" />
-
-
 
 ## NOTICE:
 1. 3d XYZ in \<label\>.txt are in rect camera coord.
 2. 2d box xy are in image2 coord
 3. Points in \<lidar\>.bin are in Velodyne coord.
-***
+
 ### Coordinate Transformation:
 ```
  y_image2 = P^2_rect * x_rect
@@ -64,7 +66,7 @@ Part of results:
              0,      0,      1,      0]
              = K * [1|t]
 ```
-***
+
 ### Coordinate Visualization:
 ```
     image2 coord:
