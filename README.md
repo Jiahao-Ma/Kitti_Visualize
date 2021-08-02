@@ -35,31 +35,38 @@ kitti
 ```
 
 ## Demo
-For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more exploration and implementation details see [Kittp.py](Kitti.py) and [utils.py](utils.py).
+For a implementation demo see [notebook](kitti_demo_notebook.ipynb). For more exploration and implementation details see [Kittp.py](Kitti.py) and [utils.py](utils.py).
 1. 3D boxes on LiDar point cloud in velodyne coordinate. Implemented by `draw_3DBBox_in_velo()`.
 2. 2D and 3D boxes on in image2 coordinate. Implemented by `draw_2DBBox_in_rgb()` and `draw_3DBBox_in_rgb()`.
 3. Point clouds visualize in velodyne coordinate. Implemented by `draw_pointclouds_in_velo()`.
 4. LiDar data on Camera image. Implmented by `draw_pointclouds_in_rgb()`.
-
+<img src=".\git_image\draw_2DBBox_in_rgb.png" alt="2D boxes LiDar data on Camera image" align="center" />
+<img src=".\git_image\draw_3DBBox_in_rgb.png" alt="3D boxes LiDar data on Camera image" align="center" />
+<img src=".\git_image\draw_pointclouds_in_rgb.png" alt="Point cloud on Camera image" align="center" />
+<img src=".\git_image\draw_pointclouds_in_velo.png" alt="bPoint cloud in velodyne coord" align="center" />
+<img src="git_image\draw_3DBBox_in_velo.png" alt="3D boxes LiDar data in velodyne coord" align="center" />
 
 
 ## NOTICE:
-### 3d XYZ in \<label\>.txt are in rect camera coord.
-### 2d box xy are in image2 coord
-### Points in \<lidar\>.bin are in Velodyne coord.
+1. 3d XYZ in \<label\>.txt are in rect camera coord.
+2. 2d box xy are in image2 coord
+3. Points in \<lidar\>.bin are in Velodyne coord.
 ***
-# Coordinate Transformation:
-    y_image2 = P^2_rect * x_rect
-    y_image2 = P^2_rect * R0_rect * Tr_velo_to_cam * x_velo
-    x_ref = Tr_velo_to_cam * x_velo
-    x_rect = R0_rect * x_ref
+### Coordinate Transformation:
+```
+ y_image2 = P^2_rect * x_rect
+ y_image2 = P^2_rect * R0_rect * Tr_velo_to_cam * x_velo
+ x_ref = Tr_velo_to_cam * x_velo
+ x_rect = R0_rect * x_ref
 
-    P^2_rect = [f^2_u,  0,      c^2_u,  -f^2_u b^2_x;
-                0,      f^2_v,  c^2_v,  -f^2_v b^2_y;
-                0,      0,      1,      0]
-                = K * [1|t]
+ P^2_rect = [f^2_u,  0,      c^2_u,  -f^2_u b^2_x;
+             0,      f^2_v,  c^2_v,  -f^2_v b^2_y;
+             0,      0,      1,      0]
+             = K * [1|t]
+```
 ***
-# Coordinate Visualization:
+### Coordinate Visualization:
+```
     image2 coord:
         ----> x-axis (u)
     |
@@ -95,8 +102,9 @@ For a implementation demo [see notebook](kitti_demo_notebook.ipynb). For more ex
     #    (z)
 
     Ref (KITTI paper): http://www.cvlibs.net/publications/Geiger2013IJRR.pdf
+```
 
-***
+
 
 
 
